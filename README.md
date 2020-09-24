@@ -21,7 +21,7 @@ Simple Todo List application using React on the frontend and Nodejs on the backe
 
 Clone the repo locally. In a terminal, run:
 
-`$ git clone https://github.com/BurakG01/todo-application.git`
+`$ git clone https://github.com/BurakG01/todo-list-application.git`
 
 ### 2. Install environments
 
@@ -169,4 +169,4 @@ Also you can check docker containers by running `$ docker ps` command. You shoul
 ### Deployment Result
 
 - If you complete all deployment steps successfully then you can get port number assigned by kubernetes for UI to access from browser.
-- Run in terminal `$ kubectl get service` and you should see all pods. Then find `todofrontend` PORT(S) `3000:[PORT]/TCP` finally you can now access the UI application by `localhost:[PORT]` in your browser.
+- Run in terminal `$ kubectl get service` and you should see all services. Then find `todofrontend` PORT(S) `3000:[PORT]/TCP` and finally you can now access the UI application by `localhost:[PORT]` in your browser.
