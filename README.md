@@ -125,9 +125,9 @@ Clone the repo locally. In a terminal, run:
 
 - Example of backend , run following commands with your docker id instead of `burakgundogdu`
 
-  `$ docker tag todo-backend:v1 burakgundogdu/todo-backend:v1`
+      $ docker tag todo-backend:v1 burakgundogdu/todo-backend:v1
 
-  `$ docker push burakgundogdu/todo-backend:v1`
+      $ docker push burakgundogdu/todo-backend:v1
 
 ### Dockerizing Result
 
@@ -138,7 +138,7 @@ Also you can check docker containers by running `$ docker ps` command. You shoul
 ## Run the application on Kubernetes
 
 1. [Adjust yaml files](#1-adjust-yaml-files)
-2. [Deploy the applications](#2-deploy-the-applicatons)
+2. [Deploy the applications](#2-deploy-the-applications)
 
 ## Prerequisite:
 
@@ -152,19 +152,19 @@ Also you can check docker containers by running `$ docker ps` command. You shoul
 
 ### 2. Deploy the applications
 
-      Run the following commands respectively
+- Run the following commands respectively
 
-`$ kubectl apply -f todomongo.yaml`
+      $ kubectl apply -f todomongo.yaml
 
-`$ kubectl apply -f mongosvc.yaml`
+      $ kubectl apply -f mongosvc.yaml
 
-`$ kubectl apply -f todobackend.yaml`
+      $ kubectl apply -f todobackend.yaml
 
-`$ kubectl apply -f todobackendsvc.yaml`
+      $ kubectl apply -f todobackendsvc.yaml
 
-`$ kubectl apply -f todofront.yaml`
+      $ kubectl apply -f todofront.yaml
 
-`$ kubectl apply -f todofrontsvc.yaml`
+      $ kubectl apply -f todofrontsvc.yaml
 
 ### Deployment Result
 
