@@ -170,3 +170,8 @@ Also you can check docker containers by running `$ docker ps` command. You shoul
 
 - If you complete all deployment steps successfully then you can get port number assigned by kubernetes for UI to access from browser.
 - Run in terminal `$ kubectl get service` and you should see all services. Then find `todofrontend` PORT(S) `3000:[PORT]/TCP` and finally you can now access the UI application by `localhost:[PORT]` in your browser.
+
+## Sample output
+
+![todo-app](https://user-images.githubusercontent.com/40125013/94156204-8050ae80-fe88-11ea-8a51-fad11bfa75b0.PNG)
+
