@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: todomongo
+  name: todomongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todomongo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: todomongo
+    spec:
+      containers:
+      - image: mongo:4.0.20
+        name: mongo
+        resources: {}
+status: {}

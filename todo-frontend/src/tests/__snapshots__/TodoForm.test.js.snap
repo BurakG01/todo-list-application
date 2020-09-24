@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<InputGroup
+  className="mb-3"
+>
+  <FormControl
+    aria-describedby="basic-addon2"
+    aria-label="add something"
+    onChange={[Function]}
+    placeholder="add item . . . "
+    size="lg"
+  />
+  <InputGroupAppend>
+    <Button
+      active={false}
+      disabled={false}
+      onClick={[Function]}
+      size="lg"
+      variant="dark"
+    >
+      ADD
+    </Button>
+  </InputGroupAppend>
+</InputGroup>
+`;

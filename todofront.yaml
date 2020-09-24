@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: todofront
+  name: todofront
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todofront
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: todofront
+    spec:
+      containers:
+      - image: burakgundogdu/todo-frontend:v4
+        name: todofront
+        ports:
+        - containerPort: 3000
+        env:
+        - name: REACT_APP_BACK_END_HOST
+          value: "todobackend"
+        - name: REACT_APP_BACK_END_PORT
+          value: "3001"
+        - name: NODE_ENV
+          value: "production"
+
+        resources: {}
+status: {}
