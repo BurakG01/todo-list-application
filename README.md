@@ -173,5 +173,4 @@ Also you can check docker containers by running `$ docker ps` command. You shoul
 
 ## Sample output
 
-![todo-app](https://user-images.githubusercontent.com/40125013/94156204-8050ae80-fe88-11ea-8a51-fad11bfa75b0.PNG)
-
+![image](https://user-images.githubusercontent.com/40125013/94157087-7bd8c580-fe89-11ea-9325-54300a53dad3.png)
