@@ -46,7 +46,7 @@ Clone the repo locally. In a terminal, run:
 - Install dependencies : `$ npm install`
 - Run the application :`$ npm start`
 
-## Run the application using Docker
+## Run the applications using Docker
 
 1. [Pull mongo image](#1-pull-mongo-image)
 
@@ -135,7 +135,7 @@ If you complete all steps successfully then you can check UI application on `loc
 
 Also you can check docker containers by running `$ docker ps` command. You should see `todo-mongo` , `todo-backend-v1`, `todo-frontend-v1` containers working.
 
-## Run the application on Kubernetes
+## Run the applications on Kubernetes
 
 1. [Adjust yaml files](#1-adjust-yaml-files)
 2. [Deploy the applications](#2-deploy-the-applications)
