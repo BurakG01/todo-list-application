@@ -62,6 +62,12 @@ Clone the repo locally. In a terminal, run:
 
 7. [Run the frontend image](#3-run-the-frontend-image)
 
+## Prerequisites:
+
+1. [Create Docker account](https://hub.docker.com/)
+2. [Install Docker CLI](https://docs.docker.com/get-docker/)
+3. [Retrieve and save your Docker user id](https://hub.docker.com/)
+
 ### 1. Pull mongo image
 
 - Pulling mongo image from docker hub
@@ -128,3 +134,39 @@ Clone the repo locally. In a terminal, run:
 If you complete all steps successfully then you can check UI application on `localhost:3002` in your browser.
 
 Also you can check docker containers by running `$ docker ps` command. You should see `todo-mongo` , `todo-backend-v1`, `todo-frontend-v1` containers working.
+
+## Run the application on Kubernetes
+
+1. [Adjust yaml files](#1-adjust-yaml-files)
+2. [Deploy the applications](#2-deploy-the-applicatons)
+
+## Prerequisite:
+
+- [Install kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl)
+
+### 1. Adjust yaml files
+
+- Replace container image with the name of the image in your docker registiry in both `todofront.yaml` and `todobackend.yaml` .
+
+  For example : `burakgundogdu/todo-frontend:v4` to `[YOUR_DOCKER_ID]/[YOUR_IMAGE_NAME]:[YOUR_TAG]`
+
+### 2. Deploy the applications
+
+      Run the following commands respectively
+
+`$ kubectl apply -f todomongo.yaml`
+
+`$ kubectl apply -f mongosvc.yaml`
+
+`$ kubectl apply -f todobackend.yaml`
+
+`$ kubectl apply -f todobackendsvc.yaml`
+
+`$ kubectl apply -f todofront.yaml`
+
+`$ kubectl apply -f todofrontsvc.yaml`
+
+### Deployment Result
+
+- If you complete all deployment steps successfully then you can get port number assigned by kubernetes for UI to access from browser.
+- Run in terminal `$ kubectl get service` and you should see all pods. Then find `todofrontend` PORT(S) `3000:[PORT]/TCP` finally you can now access the UI application by `localhost:[PORT]` in your browser.
